@@ -6,7 +6,7 @@ import { LayoutDashboard, ListTodo, Trophy, Sparkles } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Sidebar from "@/components/layout/Sidebar";
 import Card from "@/components/ui/Card";
-import { Ambassador, AppData, ensureSeedData, getLeaderboard, submitTaskProof } from "@/lib/storage";
+import { Ambassador, AppData, ensureSeedData, getLeaderboard, submitTaskProof, resetAllData } from "@/lib/storage";
 import { generateAmbassadorNotifications } from "@/lib/notificationGenerators";
 import BadgeCard from "@/components/ui/BadgeCard";
 import CircularAvatar from "@/components/ui/CircularAvatar";
@@ -366,7 +366,22 @@ export default function AmbassadorDashboardPage() {
             transition={{ delay: 0.05 }}
             className="md:col-span-12"
           >
-            <div className="flex justify-center">
+            <div className="flex justify-center gap-4">
+              <motion.button
+                type="button"
+                whileHover={{ scale: 1.02, opacity: 0.85 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => {
+                  if (confirm("Are you sure you want to reset all progress? This will clear all your data!")) {
+                    resetAllData();
+                    window.location.reload();
+                  }
+                }}
+                className="rounded-[12px] bg-[#131720] border border-[#EF4444] px-8 py-3 text-sm font-semibold text-[#EF4444] transition-all duration-150 hover:bg-[rgba(239,68,68,0.08)] flex items-center gap-2"
+              >
+                <Sparkles size={16} />
+                Reset All Data
+              </motion.button>
               <motion.button
                 type="button"
                 whileHover={{ scale: 1.02, opacity: 0.85 }}

@@ -333,3 +333,9 @@ export function submitTaskProof(userId: string, taskId: string): TaskSubmissionR
   if (!data) return null;
   return { data, pointsEarned, badgesUnlocked, alreadyCompleted };
 }
+
+export function resetAllData(): void {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem(STORAGE_KEY);
+  window.dispatchEvent(new Event("campusconnect-storage-updated"));
+}
