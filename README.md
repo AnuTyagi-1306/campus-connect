@@ -169,7 +169,24 @@ OPENAI_API_KEY=sk-proj-...  # Required for AI features
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🏆 Built With Passion
+## � Demo Video
+
+Watch the complete CampusConnect platform in action:
+
+**[📹 CampusConnect Demo Video](https://drive.google.com/file/d/1WmtumYSZusFoxmpcNwSe44v0OnXVjpCP/view?usp=sharing)**
+
+*This video demonstrates:*
+- ✅ Complete user dashboard walkthrough
+- ✅ AI-powered task generation and verification
+- ✅ Gamification system with badges and leaderboards
+- ✅ Real-time analytics and insights
+- ✅ Professional UI/UX with smooth animations
+
+*Perfect for understanding the full capabilities of the platform!*
+
+---
+
+## �🏆 Built With Passion
 
 CampusConnect was designed to revolutionize campus ambassador program management with cutting-edge technology and user-centric design. Perfect for educational institutions, startups, and organizations looking to scale their campus outreach programs.
 
